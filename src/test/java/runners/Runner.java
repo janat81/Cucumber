@@ -6,8 +6,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "./src/test/resources/features",
         glue = "stepdefinitions",
-        dryRun = false,
-        tags = "@google_search"
+        dryRun = true,
+        tags = "@parametrizing1"
 )
 public class Runner {
 }

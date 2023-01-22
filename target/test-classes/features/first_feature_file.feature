@@ -25,7 +25,7 @@ Scenario: TC_02_teapot_search
 #  Feature : To declare the file as a cucumber feature file. Mandatory. There can be ONLY one Feature: keyword
 #  Scenario : To create test case. In a feature file there may be more than one Scenario:
 #  Runner : To run the feature files.
-#  Background : Used to run before each Scenario
+#  Background : Used to run before each Scenario. It is used for repeated preconditions
 
   #  CUCUMBER STEPS:
 #  1. create feature file and test scenarios

@@ -1,4 +1,3 @@
-
 package stepdefinitions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -38,6 +37,13 @@ public class GoogleStepDefinitions {
     @Then("verify page title contains TeaPot")
     public void verify_page_title_contains_tea_pot() {
         Assert.assertTrue(Driver.getDriver().getTitle().contains("TeaPot"));
-
+    }
+    @When("user search for {string} on google")
+    public void user_search_for_on_google(String string) {
+        googlePage.searchBox.sendKeys(string+Keys.ENTER);
+    }
+    @Then("verify page title contains {string}")
+    public void verify_page_title_contains(String string) {
+        Assert.assertTrue(Driver.getDriver().getTitle().contains(string));
     }
 }
