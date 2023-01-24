@@ -3,8 +3,8 @@ Feature: data_tables
 
   Scenario Outline: TC_Create _And verify the test data creation
 
-    #Creating a reusable step that accept url and goes to that url
-    Given user is on the "https://editor.datatables.net/" page
+#    Crating a reusable step that accept url and goes to that url
+    Given user is on "https://editor.datatables.net/" page
     And user clicks on the new button
     And user enters the first name "<firstname>"
     And user enters the last name "<lastname>"
@@ -18,12 +18,8 @@ Feature: data_tables
     Then verify the name field contains the first name "<firstname>"
 
     Examples: test_data
-
-    | firstname | lastname | position | office | extension | start_date | salary |
-    | john      | smith    | tester   | NYC     | 2134     | 2023_01_23 | 8000
-
-
-
-
-
-
+      | firstname | lastname | position    | office | extension | start_date | salary  |
+      | john      | smith    | tester      | NYC    | 2134      | 2023-01-23 | 80000   |
+      | sam       | walton   | businessman | LA     | 5262      | 2023-01-24 | 2000000 |
+      | nancy     | brown    | developer   | Dallas | 2346      | 2023-01-25 | 85000   |
+      | george    | bush     | politician  | Dallas | 9931      | 2023-01-26 | 985000  |
