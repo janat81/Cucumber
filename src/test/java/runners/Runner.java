@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features",
         glue = "stepdefinitions",
         dryRun = true,
-        tags = "@parametrizing1"
+        tags = "@data_tables"
 )
 public class Runner {
 }
