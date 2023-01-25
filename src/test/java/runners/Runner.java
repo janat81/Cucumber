@@ -12,9 +12,9 @@ import org.junit.runner.RunWith;
         },
         monochrome=true,
         features = "./src/test/resources/features",
-        glue = "stepdefinitions",
-        dryRun = true,
-        tags = "@data_tables_1"
+        glue = {"stepdefinitions", "hooks"},
+        dryRun = false,
+        tags = "@failed_tests"
 )
 public class Runner {
 }
