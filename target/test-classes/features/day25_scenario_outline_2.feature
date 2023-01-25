@@ -3,7 +3,7 @@ Feature: data_tables
 
   Scenario Outline: TC_Create _And verify the test data creation
 
-#    Crating a reusable step that accept url and goes to that url
+#    Creating a reusable step that accepts url and goes to that url
     Given user is on "https://editor.datatables.net/" page
     And user clicks on the new button
     And user enters the first name "<firstname>"
