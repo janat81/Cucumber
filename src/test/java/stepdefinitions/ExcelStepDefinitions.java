@@ -8,6 +8,7 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ExcelUtil;
 import utilities.ReusableMethods;
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 public class ExcelStepDefinitions {
@@ -18,7 +19,7 @@ public class ExcelStepDefinitions {
     List<Map<String,String>> allTestData;
     //    1. Create a login method
     public void login(){
-        Driver.getDriver().get(ConfigReader.getProperty("app_home_url"));
+        Driver.getDriver().get(ConfigReader.getProperty("app_url"));
         homePage = new HomePage();
         loginPage =new LoginPage();
         ReusableMethods.waitFor(1);
@@ -43,7 +44,7 @@ public class ExcelStepDefinitions {
     }
     @Given("user tries to login as {string}")
     public void user_tries_to_login_as(String string) {
-        String path = "./src/test/java/resources/mysmoketestdata.xlsx";
+        String path = "./src/test/resources/testdata/mysmoketestdata.xlsx";
         String sheetName = "customer_info";
         excelUtil = new ExcelUtil(path, sheetName);
 //        getDataList() method returns all excel data
@@ -68,6 +69,7 @@ public class ExcelStepDefinitions {
         }
     }
     @Then("capture the screenshot")
-    public void capture_the_screenshot() {
+    public void capture_the_screenshot() throws IOException {
+        ReusableMethods.getScreenshot("screenshot");
     }
 }
