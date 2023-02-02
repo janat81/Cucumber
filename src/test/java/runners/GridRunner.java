@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
                 "rerun:target/failedRerun.txt"
         },
         monochrome=true,
-        features = "./src/test/resources/features",
+        features = "./src/test/resources/features/seleniumgrid",
         glue = {"stepdefinitions"},
         dryRun = false,
         tags = "@grid_chrome"
